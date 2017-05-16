@@ -1,0 +1,29 @@
+﻿@using Modelos.Cadastros
+@model Dispositivo
+
+
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Create", "Create")
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+        </tr>
+        <tr>
+            @foreach (var listaDisposistivos in ViewBag.DispositivoId)
+            {
+                <td>listaDispositivos.DispositivoId</td>
+                <td>listaDispositivos.Nome</td>
+                <td>@Html.ActionLink("Edit", "Edit")</td>
+                <td>@Html.ActionLink("Remove", "Remove")</td>
+
+            }
+        </tr>
+        </table>
+</div>
